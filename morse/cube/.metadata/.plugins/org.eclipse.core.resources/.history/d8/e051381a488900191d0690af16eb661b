@@ -1,0 +1,18 @@
+/*
+ * mors.h
+ *
+ *  Created on: 07.06.2019
+ *      Author: sercezar
+ */
+
+#ifndef MORS_H_
+#define MORS_H_
+
+void MainFunction(){
+
+
+
+}
+
+
+#endif /* MORS_H_ */

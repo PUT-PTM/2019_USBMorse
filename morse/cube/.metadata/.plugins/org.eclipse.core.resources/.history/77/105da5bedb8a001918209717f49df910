@@ -1,0 +1,13 @@
+/*
+ * morse.c
+ *
+ *  Created on: 09.06.2019
+ *      Author: sercezar
+ */
+
+#include "main.h"
+#include "morse.h"
+
+void MainFunction(){
+
+}
