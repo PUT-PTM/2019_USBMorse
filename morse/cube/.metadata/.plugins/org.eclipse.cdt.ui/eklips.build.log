@@ -1,36 +1,6 @@
-19:34:41 **** Incremental Build of configuration Debug for project eklips ****
+22:20:19 **** Incremental Build of configuration Debug for project eklips ****
 make all 
-Building file: ../Drivers/morse.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/morse.d" -MT"Drivers/morse.o" -o "Drivers/morse.o" "../Drivers/morse.c"
-../Drivers/morse.c: In function 'MainFunction':
-../Drivers/morse.c:49:25: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-         MessageLength = sprintf(DataToSend, "Wiadomosc nr %d\n\r", MessageCounter);
-                         ^~~~~~~
-../Drivers/morse.c:49:25: warning: incompatible implicit declaration of built-in function 'sprintf'
-../Drivers/morse.c:49:25: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-../Drivers/morse.c:49:33: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-         MessageLength = sprintf(DataToSend, "Wiadomosc nr %d\n\r", MessageCounter);
-                                 ^~~~~~~~~~
-../Drivers/morse.c:49:33: note: expected 'char *' but argument is of type 'uint8_t * {aka unsigned char *}'
-../Drivers/morse.c:50:9: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
-         CDC_Transmit_FS(DataToSend, MessageLength);
-         ^~~~~~~~~~~~~~~
-Finished building: ../Drivers/morse.c
- 
-Building target: eklips.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F411VETx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "eklips.elf" @"objects.list"   -lm
-Finished building target: eklips.elf
- 
-make --no-print-directory post-build
-Generating hex and Printing size information:
-arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
-arm-none-eabi-size "eklips.elf"
-   text	   data	    bss	    dec	    hex	filename
-  18476	    488	  10224	  29188	   7204	eklips.elf
- 
+make: Nothing to be done for 'all'.
 
-19:34:44 Build Finished (took 2s.989ms)
+22:20:19 Build Finished (took 374ms)
 

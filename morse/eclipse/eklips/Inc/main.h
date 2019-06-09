@@ -66,7 +66,6 @@ void Error_Handler(void);
 #define OTG_FS_PowerSwitchOn_GPIO_Port GPIOC
 #define Button_Pin GPIO_PIN_0
 #define Button_GPIO_Port GPIOA
-#define Button_EXTI_IRQn EXTI0_IRQn
 #define LD4_Pin GPIO_PIN_12
 #define LD4_GPIO_Port GPIOD
 #define LD3_Pin GPIO_PIN_13

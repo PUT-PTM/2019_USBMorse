@@ -9,5 +9,6 @@
 #define MORSE_H_
 
 void MainFunction();
+void
 
 #endif /* MORSE_H_ */
