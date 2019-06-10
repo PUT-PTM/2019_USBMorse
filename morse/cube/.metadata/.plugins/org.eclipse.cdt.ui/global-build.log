@@ -1,8 +1,4 @@
-22:02:48 **** Clean-only build of configuration Debug for project eklips ****
-make clean 
-rm -rf *
- 
-22:03:01 **** Build of configuration Debug for project eklips ****
+17:49:09 **** Build of configuration Debug for project eklips ****
 make all 
 Building file: ../startup/startup_stm32f411xe.s
 Invoking: MCU GCC Assembler
@@ -200,6 +196,24 @@ Building file: ../Drivers/morse.c
 Invoking: MCU GCC Compiler
 C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/morse.d" -MT"Drivers/morse.o" -o "Drivers/morse.o" "../Drivers/morse.c"
+../Drivers/morse.c: In function 'SearchSymbol':
+../Drivers/morse.c:50:27: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   MessageLength = sprintf(DataToSend, "A");
+                           ^~~~~~~~~~
+In file included from ../Drivers/morse.c:12:0:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Drivers/morse.c:51:3: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+   CDC_Transmit_FS(DataToSend, MessageLength);
+   ^~~~~~~~~~~~~~~
+../Drivers/morse.c:55:27: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   MessageLength = sprintf(DataToSend, "B");
+                           ^~~~~~~~~~
+In file included from ../Drivers/morse.c:12:0:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
 Finished building: ../Drivers/morse.c
  
 Building target: eklips.elf
@@ -212,287 +226,8 @@ Generating hex and Printing size information:
 arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
 arm-none-eabi-size "eklips.elf"
    text	   data	    bss	    dec	    hex	filename
-  15828	    488	   7968	  24284	   5edc	eklips.elf
+  16212	    496	   8032	  24740	   60a4	eklips.elf
  
-22:05:10 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-Finished building: ../Src/main.c
- 
-Building file: ../Drivers/morse.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/morse.d" -MT"Drivers/morse.o" -o "Drivers/morse.o" "../Drivers/morse.c"
-Finished building: ../Drivers/morse.c
- 
-Building target: eklips.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F411VETx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "eklips.elf" @"objects.list"   -lm
-Finished building target: eklips.elf
- 
-make --no-print-directory post-build
-Generating hex and Printing size information:
-arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
-arm-none-eabi-size "eklips.elf"
-   text	   data	    bss	    dec	    hex	filename
-  15812	    488	   7968	  24268	   5ecc	eklips.elf
- 
-22:05:24 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-make: Nothing to be done for 'all'.
-22:06:06 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-Finished building: ../Src/main.c
- 
-Building target: eklips.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F411VETx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "eklips.elf" @"objects.list"   -lm
-Finished building target: eklips.elf
- 
-make --no-print-directory post-build
-Generating hex and Printing size information:
-arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
-arm-none-eabi-size "eklips.elf"
-   text	   data	    bss	    dec	    hex	filename
-  15808	    488	   7968	  24264	   5ec8	eklips.elf
- 
-22:06:11 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-make: Nothing to be done for 'all'.
-22:13:07 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-Finished building: ../Src/main.c
- 
-Building file: ../Drivers/morse.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/morse.d" -MT"Drivers/morse.o" -o "Drivers/morse.o" "../Drivers/morse.c"
-Finished building: ../Drivers/morse.c
- 
-Building target: eklips.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F411VETx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "eklips.elf" @"objects.list"   -lm
-Finished building target: eklips.elf
- 
-make --no-print-directory post-build
-Generating hex and Printing size information:
-arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
-arm-none-eabi-size "eklips.elf"
-   text	   data	    bss	    dec	    hex	filename
-  15804	    488	   7968	  24260	   5ec4	eklips.elf
- 
-22:13:14 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-make: Nothing to be done for 'all'.
-22:14:00 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-../Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
-../Src/main.c:86:5: warning: 'main' is normally a non-static function [-Wmain]
- int main(void)
-     ^~~~
-../Src/main.c:177:13: error: invalid storage class for function 'MX_TIM10_Init'
- static void MX_TIM10_Init(void)
-             ^~~~~~~~~~~~~
-../Src/main.c:208:13: error: invalid storage class for function 'MX_GPIO_Init'
- static void MX_GPIO_Init(void)
-             ^~~~~~~~~~~~
-../Src/main.c:260:1: error: expected declaration or statement at end of input
- }
- ^
-../Src/main.c: At top level:
-../Src/main.c:57:13: warning: 'MX_GPIO_Init' used but never defined
- static void MX_GPIO_Init(void);
-             ^~~~~~~~~~~~
-../Src/main.c:58:13: warning: 'MX_TIM10_Init' used but never defined
- static void MX_TIM10_Init(void);
-             ^~~~~~~~~~~~~
-../Src/main.c:254:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
- void Error_Handler(void)
-      ^~~~~~~~~~~~~
-../Src/main.c:208:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
- static void MX_GPIO_Init(void)
-             ^~~~~~~~~~~~
-../Src/main.c:177:13: warning: 'MX_TIM10_Init' defined but not used [-Wunused-function]
- static void MX_TIM10_Init(void)
-             ^~~~~~~~~~~~~
-../Src/main.c:134:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
- void SystemClock_Config(void)
-      ^~~~~~~~~~~~~~~~~~
-../Src/main.c:86:5: warning: 'main' defined but not used [-Wunused-function]
- int main(void)
-     ^~~~
-make: *** [Src/main.o] Error 1
-Src/subdir.mk:42: recipe for target 'Src/main.o' failed
-22:14:14 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-Finished building: ../Src/main.c
- 
-Building target: eklips.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F411VETx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "eklips.elf" @"objects.list"   -lm
-Finished building target: eklips.elf
- 
-make --no-print-directory post-build
-Generating hex and Printing size information:
-arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
-arm-none-eabi-size "eklips.elf"
-   text	   data	    bss	    dec	    hex	filename
-  15804	    488	   7968	  24260	   5ec4	eklips.elf
- 
-22:14:32 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-Finished building: ../Src/main.c
- 
-Building target: eklips.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F411VETx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "eklips.elf" @"objects.list"   -lm
-Finished building target: eklips.elf
- 
-make --no-print-directory post-build
-Generating hex and Printing size information:
-arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
-arm-none-eabi-size "eklips.elf"
-   text	   data	    bss	    dec	    hex	filename
-  15804	    488	   7968	  24260	   5ec4	eklips.elf
- 
-22:14:38 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-make: Nothing to be done for 'all'.
-22:17:23 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-Finished building: ../Src/main.c
- 
-Building target: eklips.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F411VETx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "eklips.elf" @"objects.list"   -lm
-Finished building target: eklips.elf
- 
-make --no-print-directory post-build
-Generating hex and Printing size information:
-arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
-arm-none-eabi-size "eklips.elf"
-   text	   data	    bss	    dec	    hex	filename
-  15820	    488	   7968	  24276	   5ed4	eklips.elf
- 
-22:17:31 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-make: Nothing to be done for 'all'.
-22:17:52 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-Finished building: ../Src/main.c
- 
-Building target: eklips.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F411VETx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "eklips.elf" @"objects.list"   -lm
-Finished building target: eklips.elf
- 
-make --no-print-directory post-build
-Generating hex and Printing size information:
-arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
-arm-none-eabi-size "eklips.elf"
-   text	   data	    bss	    dec	    hex	filename
-  15800	    488	   7968	  24256	   5ec0	eklips.elf
- 
-22:17:57 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-make: Nothing to be done for 'all'.
-22:18:21 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-Finished building: ../Src/main.c
- 
-Building target: eklips.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F411VETx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "eklips.elf" @"objects.list"   -lm
-Finished building target: eklips.elf
- 
-make --no-print-directory post-build
-Generating hex and Printing size information:
-arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
-arm-none-eabi-size "eklips.elf"
-   text	   data	    bss	    dec	    hex	filename
-  15804	    488	   7968	  24260	   5ec4	eklips.elf
- 
-22:18:27 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-make: Nothing to be done for 'all'.
-22:19:41 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-Finished building: ../Src/main.c
- 
-Building target: eklips.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F411VETx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "eklips.elf" @"objects.list"   -lm
-Finished building target: eklips.elf
- 
-make --no-print-directory post-build
-Generating hex and Printing size information:
-arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
-arm-none-eabi-size "eklips.elf"
-   text	   data	    bss	    dec	    hex	filename
-  15820	    488	   7968	  24276	   5ed4	eklips.elf
- 
-22:19:47 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-make: Nothing to be done for 'all'.
-22:20:13 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-Finished building: ../Src/main.c
- 
-Building target: eklips.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F411VETx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "eklips.elf" @"objects.list"   -lm
-Finished building target: eklips.elf
- 
-make --no-print-directory post-build
-Generating hex and Printing size information:
-arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
-arm-none-eabi-size "eklips.elf"
-   text	   data	    bss	    dec	    hex	filename
-  15820	    488	   7968	  24276	   5ed4	eklips.elf
- 
-22:20:19 **** Incremental Build of configuration Debug for project eklips ****
+17:49:38 **** Incremental Build of configuration Debug for project eklips ****
 make all 
 make: Nothing to be done for 'all'.

@@ -1,0 +1,55 @@
+/*
+ * morse.c
+ *
+ *  Created on: 09.06.2019
+ *      Author: sercezar
+ */
+
+#include "main.h"
+#include "morse.h"
+#include<stdbool.h>
+
+
+
+
+uint8_t DataToSend[40];
+uint8_t MessageCounter = 0;
+uint8_t MessageLength = 0;
+_Bool CharArray[10];
+uint8_t Iterator=0;
+
+
+void MainFunction(){
+
+}
+
+void GetChars(uint32_t PressCounter){
+	size_t length= sizeof(CharArray)/sizeof(CharArray[0]);
+	if(true){
+		if(PressCounter<=6){
+			CharArray[length]=0;
+		}
+		else{
+			CharArray[length]=1;
+		}
+	}
+}
+
+
+void ThrowWord(){
+	size_t length= sizeof(CharArray)/sizeof(CharArray[0]);
+	if(CharArray[length-1]==0){
+		++MessageCounter;
+		MessageLength = sprintf(DataToSend, "Wiadomosc krotka %d\n\r", MessageCounter);
+		CDC_Transmit_FS(DataToSend, MessageLength);
+	}
+	else if(CharArray[length-1]==1){
+		++MessageCounter;
+		MessageLength = sprintf(DataToSend, "Wiadomosc dluga %d\n\r", MessageCounter);
+		CDC_Transmit_FS(DataToSend, MessageLength);
+	}
+}
+
+/*char SearchSymbol(char Array[10]){
+
+}*/

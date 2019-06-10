@@ -9,6 +9,8 @@
 #define MORSE_H_
 
 void MainFunction();
-void
+void GetChars(uint32_t PressCounter);
+void ThrowWord();
+void SearchSymbol();
 
 #endif /* MORSE_H_ */

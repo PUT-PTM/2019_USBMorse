@@ -21,7 +21,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "usb_device.h"
-#include "stm32f4xx_hal.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -46,8 +45,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim10;
-uint32_t PressCounter=0; //licznik przycisniecia
-
+uint32_t PressCounter=0; //licznik przycisku
+uint32_t PauseCounter=0; //licznik przerwy
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -58,22 +57,31 @@ static void MX_GPIO_Init(void);
 static void MX_TIM10_Init(void);
 /* USER CODE BEGIN PFP */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
- if(htim->Instance == TIM10){ // Je¿eli przerwanie pochodzi od timera 10
-	 if(HAL_GPIO_ReadPin(Button_GPIO_Port, Button_Pin) == GPIO_PIN_SET){
-	  PressCounter++;
-	  	  if(PressCounter>3){
-	  		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15|GPIO_PIN_14|GPIO_PIN_13|GPIO_PIN_12 , GPIO_PIN_SET);
-	  	  }
-	  	  else if(PressCounter>0){
-	  		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
-	  	  }
-
-	  }
-	 else{
-		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15|GPIO_PIN_14|GPIO_PIN_13|GPIO_PIN_12, GPIO_PIN_RESET);
-		  PressCounter=0;
-	  }
- }
+	 if(htim->Instance == TIM10){
+		 if(HAL_GPIO_ReadPin(Button_GPIO_Port, Button_Pin) == GPIO_PIN_SET){
+			 PressCounter++;
+			 PauseCounter=0;
+		  	  if(PressCounter>6){
+		  		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15|GPIO_PIN_14|GPIO_PIN_13|GPIO_PIN_12 , GPIO_PIN_SET);
+		  	  }
+		  	  else if(PressCounter>0){
+		  		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
+		  	  }
+		  }
+		 else{
+			 PauseCounter++;
+			 if(PressCounter>0) {
+				 GetChars(PressCounter);
+			 }
+			 else if(PauseCounter==18){
+				 ThrowWord();
+			 }
+			 HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15|GPIO_PIN_14|GPIO_PIN_13|GPIO_PIN_12, GPIO_PIN_RESET);
+			 PressCounter=0;
+		  }
+	 }
+	 if(PressCounter>4000) PressCounter=7;
+	 if(PauseCounter>4000) PauseCounter=11;
 }
 /* USER CODE END PFP */
 
@@ -190,7 +198,7 @@ static void MX_TIM10_Init(void)
   htim10.Instance = TIM10;
   htim10.Init.Prescaler = 9999;
   htim10.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim10.Init.Period = 359;
+  htim10.Init.Period = 179;
   htim10.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim10.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim10) != HAL_OK)
