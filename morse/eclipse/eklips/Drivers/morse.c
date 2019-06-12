@@ -11,15 +11,9 @@
 #include <string.h>
 #include <stdio.h>
 
-
-
-
-
-uint8_t DataToSend[40];
-uint8_t MessageCounter = 0;
+uint8_t DataToSend[99];
 uint8_t MessageLength = 0;
-//char CharArray[20]="";
-char CharArray[20]="";
+char CharArray[90]="";
 
 const char *a="._";
 const char *b="_...";
@@ -48,6 +42,34 @@ const char *x="_.._";
 const char *y="_.__";
 const char *z="__..";
 
+const char *one=".____";
+const char *two="..___";
+const char *three="...__";
+const char *four="...._";
+const char *five=".....";
+const char *six="_.....";
+const char *seven="__...";
+const char *eight="___..";
+const char *nine="____.";
+const char *zero="_____";
+
+const char *dot="._._._";
+const char *comma="__..__";
+const char *apo=".____.";
+const char *quo="._.._.";
+const char *underscr="..__._";
+const char *colon="___...";
+const char *semicolon="_._._.";
+const char *questmark="..__..";
+const char *exclammark="_._.__";
+const char *dash="_...._";
+const char *plus="._._.";
+const char *slash="_.._.";
+const char *openbr="_.__.";
+const char *closebr="_.__._";
+const char *equal="_..._";
+const char *at=".__._.";
+const char *space="._.._";
 
 void MainFunction(){
 
@@ -64,139 +86,174 @@ void GetChars(uint32_t PressCounter){
 
 void ThrowWord(){
 	SearchSymbol();
-	//memset( CharArray, '\0', sizeof(char)*20);
-	strcpy(CharArray,"");
+	memset( CharArray, '\0', sizeof(char)*20);
 }
 
 void SearchSymbol(){
 	if (strcmp (CharArray, a) == 0) {
-		++MessageCounter;
-		MessageLength = sprintf(DataToSend, "A");
-		CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("A");
 	}
 	else if(strcmp (CharArray, b) == 0){
-		++MessageCounter;
-		MessageLength = sprintf(DataToSend, "B");
-		CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("B");
 	}
 	else if(strcmp (CharArray, c) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "C");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("C");
 		}
 	else if(strcmp (CharArray, d) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "D");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("D");
 		}
 	else if(strcmp (CharArray, e) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "E");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("E");
 		}
 	else if(strcmp (CharArray, f) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "F");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("F");
 		}
 	else if(strcmp (CharArray, g) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "G");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("G");
 		}
 	else if(strcmp (CharArray, h) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "H");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("H");
 		}
 	else if(strcmp (CharArray, i) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "I");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("I");
 		}
 	else if(strcmp (CharArray, j) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "J");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("J");
 		}
 	else if(strcmp (CharArray, k) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "K");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("K");
 		}
 	else if(strcmp (CharArray, l) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "L");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("L");
 		}
 	else if(strcmp (CharArray, m) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "M");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("M");
 		}
 	else if(strcmp (CharArray, n) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "N");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("N");
 		}
 	else if(strcmp (CharArray, o) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "O");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("O");
 		}
 	else if(strcmp (CharArray, p) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "P");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("P");
 		}
 	else if(strcmp (CharArray, q) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "Q");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("Q");
 		}
 	else if(strcmp (CharArray, r) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "R");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("R");
 		}
 	else if(strcmp (CharArray, s) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "S");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("S");
 		}
 	else if(strcmp (CharArray, t) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "T");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("T");
 		}
 	else if(strcmp (CharArray, u) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "U");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("U");
 		}
 	else if(strcmp (CharArray, v) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "V");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("V");
 		}
 	else if(strcmp (CharArray, w) == 0){
-			++MessageCounter;
-			MessageLength = sprintf(DataToSend, "W");
-			CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("W");
 		}
 	else if(strcmp (CharArray, x) == 0){
-				++MessageCounter;
-				MessageLength = sprintf(DataToSend, "X");
-				CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("X");
 			}
 	else if(strcmp (CharArray, y) == 0){
-				++MessageCounter;
-				MessageLength = sprintf(DataToSend, "Y");
-				CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("Y");
 			}
 	else if(strcmp (CharArray, z) == 0){
-				++MessageCounter;
-				MessageLength = sprintf(DataToSend, "Z");
-				CDC_Transmit_FS(DataToSend, MessageLength);
+				DisplaySymbol("Z");
 			}
+	//////////////////////////////////////////////
+	else if(strcmp (CharArray, one) == 0){
+					DisplaySymbol("1");
+		}
+	else if(strcmp (CharArray, two) == 0){
+					DisplaySymbol("2");
+		}
+	else if(strcmp (CharArray, three) == 0){
+					DisplaySymbol("3");
+		}
+	else if(strcmp (CharArray, four) == 0){
+					DisplaySymbol("4");
+		}
+	else if(strcmp (CharArray, five) == 0){
+					DisplaySymbol("5");
+		}
+	else if(strcmp (CharArray, six) == 0){
+					DisplaySymbol("6");
+		}
+	else if(strcmp (CharArray, seven) == 0){
+					DisplaySymbol("7");
+		}
+	else if(strcmp (CharArray, eight) == 0){
+					DisplaySymbol("8");
+		}
+	else if(strcmp (CharArray, nine) == 0){
+					DisplaySymbol("9");
+		}
+	else if(strcmp (CharArray, zero) == 0){
+					DisplaySymbol("0");
+		}
+	///////////////////////////////////////////
+	else if(strcmp (CharArray, dot) == 0){
+					DisplaySymbol(".");
+		}
+	else if(strcmp (CharArray, comma) == 0){
+					DisplaySymbol(",");
+		}
+	else if(strcmp (CharArray, apo) == 0){
+					DisplaySymbol("'");
+		}
+	else if(strcmp (CharArray, quo) == 0){
+					DisplaySymbol("\"");
+		}
+	else if(strcmp (CharArray, underscr) == 0){
+					DisplaySymbol("_");
+		}
+	else if(strcmp (CharArray, colon) == 0){
+					DisplaySymbol(":");
+		}
+	else if(strcmp (CharArray, semicolon) == 0){
+					DisplaySymbol(";");
+		}
+	else if(strcmp (CharArray, questmark) == 0){
+					DisplaySymbol("?");
+		}
+	else if(strcmp (CharArray, exclammark) == 0){
+					DisplaySymbol("!");
+		}
+	else if(strcmp (CharArray, dash) == 0){
+					DisplaySymbol("-");
+		}
+	else if(strcmp (CharArray, plus) == 0){
+					DisplaySymbol("+");
+		}
+	else if(strcmp (CharArray, slash) == 0){
+					DisplaySymbol("/");
+		}
+	else if(strcmp (CharArray, openbr) == 0){
+					DisplaySymbol("(");
+		}
+	else if(strcmp (CharArray, closebr) == 0){
+					DisplaySymbol(")");
+		}
+	else if(strcmp (CharArray, equal) == 0){
+					DisplaySymbol("=");
+		}
+	else if(strcmp (CharArray, at) == 0){
+					DisplaySymbol("@");
+		}
+	else if(strcmp (CharArray, space) == 0){
+					DisplaySymbol(" ");
+		}
+}
+
+void DisplaySymbol(char *display){
+	MessageLength = sprintf(DataToSend, display);
+	CDC_Transmit_FS(DataToSend, MessageLength);
 }

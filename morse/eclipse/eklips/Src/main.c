@@ -45,8 +45,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim10;
-uint32_t PressCounter=0;
-uint32_t PauseCounter=0;
+uint32_t PressCounter=0; //licznik przycisniecia
+uint32_t PauseCounter=0; //licznik pauzy
 
 /* USER CODE BEGIN PV */
 
@@ -83,9 +83,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 			 HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_SET);
 			 PressCounter=0;
 		  }
+
 	 }
-	 if(PressCounter>4000) PressCounter=7;
-	 if(PauseCounter>4000) PauseCounter=11;
+	 if(PressCounter>40000) PressCounter=7;
+	 if(PauseCounter>40000) PauseCounter=19;
 }
 /* USER CODE END PFP */
 

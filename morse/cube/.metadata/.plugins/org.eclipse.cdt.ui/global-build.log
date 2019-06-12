@@ -1,7 +1,4 @@
-20:53:46 **** Clean-only build of configuration Debug for project eklips ****
-make clean 
-make: *** No rule to make target 'clean'.  Stop.
-20:53:54 **** Build of configuration Debug for project eklips ****
+13:50:02 **** Build of configuration Debug for project eklips ****
 make all 
 Building file: ../startup/startup_stm32f411xe.s
 Invoking: MCU GCC Assembler
@@ -199,192 +196,17 @@ Building file: ../Drivers/morse.c
 Invoking: MCU GCC Compiler
 C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/morse.d" -MT"Drivers/morse.o" -o "Drivers/morse.o" "../Drivers/morse.c"
-../Drivers/morse.c: In function 'SearchSymbol':
-../Drivers/morse.c:74:27: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-   MessageLength = sprintf(DataToSend, "A");
-                           ^~~~~~~~~~
+../Drivers/morse.c: In function 'DisplaySymbol':
+../Drivers/morse.c:257:26: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  MessageLength = sprintf(DataToSend, display);
+                          ^~~~~~~~~~
 In file included from ../Drivers/morse.c:12:0:
 c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
  int sprintf (char *__restrict, const char *__restrict, ...)
      ^~~~~~~
-../Drivers/morse.c:75:3: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
-   CDC_Transmit_FS(DataToSend, MessageLength);
-   ^~~~~~~~~~~~~~~
-../Drivers/morse.c:79:27: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-   MessageLength = sprintf(DataToSend, "B");
-                           ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:84:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "C");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:89:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "D");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:94:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "E");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:99:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "F");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:104:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "G");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:109:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "H");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:114:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "I");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:119:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "J");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:124:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "K");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:129:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "L");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:134:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "M");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:139:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "N");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:144:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "O");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:149:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "P");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:154:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "Q");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:159:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "R");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:164:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "S");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:169:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "T");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:174:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "U");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:179:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "V");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:184:28: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-    MessageLength = sprintf(DataToSend, "W");
-                            ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:189:29: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-     MessageLength = sprintf(DataToSend, "X");
-                             ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:194:29: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-     MessageLength = sprintf(DataToSend, "Y");
-                             ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
-../Drivers/morse.c:199:29: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-     MessageLength = sprintf(DataToSend, "Z");
-                             ^~~~~~~~~~
-In file included from ../Drivers/morse.c:12:0:
-c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
- int sprintf (char *__restrict, const char *__restrict, ...)
-     ^~~~~~~
+../Drivers/morse.c:258:2: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+  CDC_Transmit_FS(DataToSend, MessageLength);
+  ^~~~~~~~~~~~~~~
 Finished building: ../Drivers/morse.c
  
 Building target: eklips.elf
@@ -397,21 +219,35 @@ Generating hex and Printing size information:
 arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
 arm-none-eabi-size "eklips.elf"
    text	   data	    bss	    dec	    hex	filename
-  17608	    592	   8032	  26232	   6678	eklips.elf
+  20072	    700	   8164	  28936	   7108	eklips.elf
  
-20:54:19 **** Incremental Build of configuration Debug for project eklips ****
+13:50:29 **** Incremental Build of configuration Debug for project eklips ****
 make all 
 make: Nothing to be done for 'all'.
-20:55:10 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-make: Nothing to be done for 'all'.
-20:55:22 **** Incremental Build of configuration Debug for project eklips ****
+13:57:33 **** Incremental Build of configuration Debug for project eklips ****
 make all 
 Building file: ../Src/main.c
 Invoking: MCU GCC Compiler
 C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
 Finished building: ../Src/main.c
+ 
+Building file: ../Drivers/morse.c
+Invoking: MCU GCC Compiler
+C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/morse.d" -MT"Drivers/morse.o" -o "Drivers/morse.o" "../Drivers/morse.c"
+../Drivers/morse.c: In function 'DisplaySymbol':
+../Drivers/morse.c:257:26: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  MessageLength = sprintf(DataToSend, display);
+                          ^~~~~~~~~~
+In file included from ../Drivers/morse.c:12:0:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Drivers/morse.c:258:2: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+  CDC_Transmit_FS(DataToSend, MessageLength);
+  ^~~~~~~~~~~~~~~
+Finished building: ../Drivers/morse.c
  
 Building target: eklips.elf
 Invoking: MCU GCC Linker
@@ -423,28 +259,8 @@ Generating hex and Printing size information:
 arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
 arm-none-eabi-size "eklips.elf"
    text	   data	    bss	    dec	    hex	filename
-  17608	    592	   8032	  26232	   6678	eklips.elf
+  20072	    700	   8164	  28936	   7108	eklips.elf
  
-20:56:22 **** Incremental Build of configuration Debug for project eklips ****
+13:57:38 **** Incremental Build of configuration Debug for project eklips ****
 make all 
 make: Nothing to be done for 'all'.
-20:56:31 **** Incremental Build of configuration Debug for project eklips ****
-make all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\sercezar\Desktop\morse\eclipse\eklips\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F411xE -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/sercezar/Desktop/morse/eclipse/eklips/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-Finished building: ../Src/main.c
- 
-Building target: eklips.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nosys.specs -specs=nano.specs -T"../STM32F411VETx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "eklips.elf" @"objects.list"   -lm
-Finished building target: eklips.elf
- 
-make --no-print-directory post-build
-Generating hex and Printing size information:
-arm-none-eabi-objcopy -O ihex "eklips.elf" "eklips.hex"
-arm-none-eabi-size "eklips.elf"
-   text	   data	    bss	    dec	    hex	filename
-  17624	    592	   8032	  26248	   6688	eklips.elf
- 

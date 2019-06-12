@@ -8,9 +8,10 @@
 #ifndef MORSE_H_
 #define MORSE_H_
 
-void MainFunction();
-void GetChars(uint32_t PressCounter);
-void ThrowWord();
-void SearchSymbol();
+void MainFunction(); //funkcja-petla
+void GetChars(uint32_t PressCounter); //odczytuje pojedyncze stukniecia i zapisuje odpowiednie impulsy
+void ThrowWord(); //wyrzuca slowo i czysci tablice znakow
+void SearchSymbol(); //szukanie symbolu
+void DisplaySymbol(char *display); //wyswietla symbole na terminalu
 
 #endif /* MORSE_H_ */
