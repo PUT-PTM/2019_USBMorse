@@ -10,9 +10,9 @@ Impulses are determined by length of button-press. Long impulse = 3x Short impul
 Pins placement: PC14-Buzzer, PH0 and PH1-Clock, PA0-Button, PD12-PD15 - LEDS, PA11-PA12 - VCP USB
 
 Future development opportunities:
--Communication in the other direction (from computer to STM32)
--Addition of an external button
--Addition of an external screen
+- Communication in the other direction (from computer to STM32)
+- Addition of an external button
+- Addition of an external screen
 
 ## Tools
 (STM32F411E-DISCO), C language, Buzzer with active generator
@@ -23,13 +23,13 @@ Future development opportunities:
 3. Use the button according to the morse code alphabet
 
 ## How to compile
-Clone, compile project to STM32F4 Discovery.
-Connect all pins correctly: PC14-Buzzer PH0,PH1-Clock, PA0-Button, PD12-D15 -LEDS 
+1. Clone and compile project to STM32F4 Discovery.
+2. Connect all pins correctly: PC14-Buzzer, PH0 and PH1-Clock, PA0-Button, PD12-D15 - LEDS 
 
 ## Attributions
-Course for beginners:
+- Course for beginners:
 https://forbot.pl/blog/kurs-stm32-f4-11-komunikacja-przez-usb-id13477
-Virtual Port Com:
+- Virtual Port Com:
 https://github.com/xenovacivus/STM32DiscoveryVCP
 
 ## License
