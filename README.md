@@ -10,9 +10,9 @@ Impulses are determined by length of button-press. Long impulse = 3x Short impul
 Pins placement: PC14-Buzzer, PH0 and PH1-Clock, PA0-Button, PD12-PD15 - LEDS, PA11-PA12 - VCP USB
 
 Future development opportunities:
-*Communication in the other direction (from computer to STM32)
-*Addition of an external button
-*Addition of an external screen
+-Communication in the other direction (from computer to STM32)
+-Addition of an external button
+-Addition of an external screen
 
 ## Tools
 (STM32F411E-DISCO), C language, Buzzer with active generator
