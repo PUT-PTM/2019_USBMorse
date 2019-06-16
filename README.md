@@ -10,15 +10,17 @@ Impulses are determined by length of button-press. Long impulse = 3x Short impul
 Pins placement: PC14-Buzzer, PH0 and PH1-Clock, PA0-Button, PD12-PD15 - LEDS, PA11-PA12 - VCP USB
 
 Future development opportunities:
-Communication in the other direction (from computer to STM32)
-Addition of an external button
-Addition of an external screen
+*Communication in the other direction (from computer to STM32)
+*Addition of an external button
+*Addition of an external screen
 
 ## Tools
 (STM32F411E-DISCO), C language, Buzzer with active generator
 
 ## How to run
-Connect everything, run software for VPC terminal on the computer, use the button according to the morse code alphabet
+1. Connect everything
+2. Run software for VPC terminal on the computer
+3. Use the button according to the morse code alphabet
 
 ## How to compile
 Clone, compile project to STM32F4 Discovery.
